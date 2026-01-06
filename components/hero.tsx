@@ -121,9 +121,13 @@ export function HeroSection() {
           >
             <div className="w-full h-full bg-linear-to-br from-accent/10 to-transparent flex items-center justify-center">
               <div className="text-center">
-                <div className="w-48 h-48 rounded-full bg-linear-to-br from-accent to-accent/30 mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-5xl">👨‍💻</span>
-                </div>
+                
+                  <img
+                  src="/myimg.jpeg"
+                  alt="Ekagra Sharma"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
+                
                 <p className="text-muted-foreground text-sm">Professional Photo</p>
               </div>
             </div>
