@@ -25,6 +25,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { SKILLS_CATEGORIES } from "./utils/constant/skills.constant"
 import { EXPERIENCE } from "./utils/constant/experience.constant"
 import {PROJECTS} from "./utils/constant/projects.contant"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
+import { HeroSection } from "@/components/hero"
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -32,123 +35,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 
-// ============================================================================
-// HERO SECTION
-// ============================================================================
-function HeroSection() {
-  const nameRef = useRef(null)
-  const subtitleRef = useRef(null)
-  const imageRef = useRef(null)
-  const ctaRef = useRef(null)
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline()
-
-      tl.from(nameRef.current, {
-        duration: 1,
-        opacity: 0,
-        y: 50,
-      })
-        .from(
-          subtitleRef.current,
-          {
-            duration: 0.8,
-            opacity: 0,
-            y: 30,
-          },
-          "-=0.5",
-        )
-        .from(
-          imageRef.current,
-          {
-            duration: 0.8,
-            opacity: 0,
-            scale: 0.9,
-          },
-          "-=0.5",
-        )
-        .from(
-          ctaRef.current,
-          {
-            duration: 0.6,
-            opacity: 0,
-            y: 20,
-          },
-          "-=0.4",
-        )
-    })
-
-    return () => ctx.revert()
-  }, [])
-
-  const socials = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:ekagra@example.com", label: "Email" },
-  ]
-
-  return (
-    <section className="min-h-screen pt-32 pb-20 px-6 noise-bg" id="home">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8">
-          <div>
-            <div className="accent-line mb-8" />
-            <h1 ref={nameRef} className="text-7xl lg:text-8xl font-black text-foreground leading-tight">
-              Ekagra <span className="text-accent">Sharma</span>
-            </h1>
-            <p ref={subtitleRef} className="text-2xl lg:text-3xl text-muted-foreground mt-6 font-medium">
-              Full Stack Developer & Designer
-            </p>
-          </div>
-
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-lg">
-            I build modern web products with beautiful interfaces and robust backends. Expertise in Next.js, TypeScript,
-            and AI integration.
-          </p>
-
-          <div ref={ctaRef} className="flex flex-wrap gap-4">
-            <a
-              href="#projects"
-              className="px-8 py-4 bg-accent text-accent-foreground font-bold rounded-lg hover:opacity-90 transition-opacity"
-            >
-              View My Work
-            </a>
-            <a
-              href="#contact"
-              className="px-8 py-4 glass-effect font-bold rounded-lg hover:border-accent/50 transition-all"
-            >
-              Get in Touch
-            </a>
-          </div>
-
-          <div className="flex gap-6">
-            {socials.map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-accent transition-colors"
-              >
-                <Icon size={24} />
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div ref={imageRef} className="relative h-96 lg:h-full min-h-96">
-          <div className="absolute inset-0 bg-linear-to-br from-accent/20 to-transparent rounded-2xl" />
-          <img
-            src="/professional-developer-portrait.jpg"
-            alt="Ekagra Sharma"
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-      </div>
-    </section>
-  )
-}
 
 
 // ============================================================================
@@ -186,7 +72,7 @@ function AboutSection() {
   }, [])
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 noise-bg" id="about">
+    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="about">
       <div className="max-w-4xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
@@ -299,7 +185,7 @@ function ProjectsSection() {
   }, [])
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 noise-bg" id="projects">
+    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="projects">
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
@@ -392,7 +278,7 @@ function SkillsSection() {
   }, [])
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 noise-bg" id="skills">
+    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="skills">
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
@@ -594,7 +480,7 @@ function ExperienceSection() {
   }, [])
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 noise-bg" id="experience">
+    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="experience">
       <div className="max-w-5xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
@@ -748,7 +634,7 @@ function ContactSection() {
   }
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 noise-bg" id="contact">
+    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="contact">
       <div className="max-w-2xl mx-auto">
         <div ref={titleRef} className="mb-16 text-center">
           <div className="accent-line mb-8 mx-auto w-fit" />
@@ -808,104 +694,8 @@ function ContactSection() {
   )
 }
 
-// ============================================================================
-// NAVBAR COMPONENT
-// ============================================================================
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState("home")
 
-  const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#experience", label: "Experience" },
-    { href: "#contact", label: "Contact" },
-  ]
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map((item) => item.href.slice(1))
-      const current = sections.find((section) => {
-        const element = document.getElementById(section)
-        if (element) {
-          const rect = element.getBoundingClientRect()
-          return rect.top <= 200 && rect.bottom >= 200
-        }
-        return false
-      })
-      if (current) setActiveSection(current)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  return (
-    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold text-foreground">
-          ES<span className="text-accent">.</span>
-        </a>
-
-        {/* Desktop menu */}
-        <div className="hidden md:flex gap-8 items-center">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={`text-sm font-medium transition-colors ${
-                activeSection === item.href.slice(1) ? "text-accent" : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-
-        {/* Mobile menu button */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-foreground">
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
-        {/* Mobile menu with gradient background */}
-        {isOpen && (
-          <div className="absolute top-16 left-0 right-0 md:hidden bg-gradient-to-b from-background via-background/95 to-background/80 border-b border-border backdrop-blur-md">
-            <div className="flex flex-col gap-4 p-6">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className={`text-sm font-medium transition-colors ${
-                    activeSection === item.href.slice(1) ? "text-accent" : "text-muted-foreground hover:text-foreground"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  )
-}
-
-// ============================================================================
-// FOOTER COMPONENT
-// ============================================================================
-function Footer() {
-  return (
-    <footer className="border-t border-border bg-background/50 py-12 px-6">
-      <div className="max-w-7xl mx-auto text-center text-muted-foreground space-y-2">
-        <p>Built with Next.js, TypeScript, and Tailwind CSS</p>
-        <p className="text-sm mt-2">© 2025 Ekagra Sharma. All rights reserved.</p>
-      </div>
-    </footer>
-  )
-}
 
 // ============================================================================
 // MAIN PAGE COMPONENT

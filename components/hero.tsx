@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import gsap from "gsap"
 
-export function Hero() {
+export function HeroSection() {
   const nameRef = useRef(null)
   const subtitleRef = useRef(null)
   const imageRef = useRef(null)
@@ -114,14 +114,14 @@ export function Hero() {
         </div>
 
         {/* Right side - Image placeholder */}
-        <div className="relative h-[500px] lg:h-[600px] flex items-center justify-center">
+        <div className="relative h-125 lg:h-150 flex items-center justify-center">
           <div
             ref={imageRef}
             className="absolute inset-0 rounded-2xl overflow-hidden glass-effect border-2 border-accent/20"
           >
-            <div className="w-full h-full bg-gradient-to-br from-accent/10 to-transparent flex items-center justify-center">
+            <div className="w-full h-full bg-linear-to-br from-accent/10 to-transparent flex items-center justify-center">
               <div className="text-center">
-                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-accent to-accent/30 mx-auto mb-4 flex items-center justify-center">
+                <div className="w-48 h-48 rounded-full bg-linear-to-br from-accent to-accent/30 mx-auto mb-4 flex items-center justify-center">
                   <span className="text-5xl">👨‍💻</span>
                 </div>
                 <p className="text-muted-foreground text-sm">Professional Photo</p>
