@@ -22,130 +22,15 @@ import {
 } from "lucide-react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { SKILLS_CATEGORIES } from "./utils/constant/skills.constant"
+import { EXPERIENCE } from "./utils/constant/experience.constant"
+import {PROJECTS} from "./utils/constant/projects.contant"
+
 
 gsap.registerPlugin(ScrollTrigger)
 
-const PROJECTS = [
-  {
-    title: "AI Content Platform",
-    description: "Full-stack SaaS for AI-powered content generation with real-time collaboration",
-    type: "SaaS",
-    icon: Brain,
-    href: "#",
-    tech: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-  },
-  {
-    title: "Design System",
-    description: "Comprehensive component library with 50+ components and live documentation",
-    type: "Design",
-    icon: Palette,
-    href: "#",
-    tech: ["React", "Tailwind CSS", "Storybook"],
-  },
-  {
-    title: "Real-time Analytics",
-    description: "Dashboard for tracking user behavior and product metrics with WebSocket integration",
-    type: "Analytics",
-    icon: BarChart3,
-    href: "#",
-    tech: ["Next.js", "WebSocket", "D3.js", "Redis"],
-  },
-  {
-    title: "E-Commerce Platform",
-    description: "Full shopping experience with inventory management and payment processing",
-    type: "E-Commerce",
-    icon: ShoppingCart,
-    href: "#",
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Vercel"],
-  },
-]
 
-const SKILLS_CATEGORIES = [
-  {
-    category: "Frontend",
-    icon: Code,
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion"],
-  },
-  {
-    category: "Backend",
-    icon: GitBranch,
-    skills: ["Node.js", "PostgreSQL", "API Design", "Authentication", "WebSockets", "Caching"],
-  },
-  {
-    category: "Full Stack",
-    icon: Zap,
-    skills: ["System Design", "Database Architecture", "DevOps", "Cloud Deployment", "Scaling", "Testing"],
-  },
-  {
-    category: "Design",
-    icon: Palette,
-    skills: ["UI/UX Design", "Figma", "Prototyping", "Design Systems", "Wireframing"],
-  },
-  {
-    category: "AI & Tools",
-    icon: Sparkles,
-    skills: ["AI Integration", "OpenAI API", "LangChain", "Prompt Engineering", "Vector DBs"],
-  },
-  {
-    category: "DevOps",
-    icon: Users,
-    skills: ["Docker", "AWS", "Vercel", "CI/CD", "GitHub Actions", "Monitoring"],
-  },
-]
 
-const EXPERIENCE = [
-  {
-    title: "Senior Full Stack Developer",
-    company: "Tech Startup",
-    duration: "2022 - Present",
-    description:
-      "Led development of AI-powered platform serving 10k+ users. Architected microservices, implemented real-time features, and scaled infrastructure to handle 100k requests/day. Managed cross-functional teams and delivered multiple product launches.",
-    achievements: ["Scaled to 10k+ users", "Built AI features", "Led team of 3 developers"],
-    details: {
-      highlights: [
-        "Architected and deployed microservices handling 100k req/day",
-        "Implemented real-time collaboration features using WebSockets",
-        "Reduced load time by 60% through optimization",
-        "Built AI integration pipeline with OpenAI and custom models",
-      ],
-      stack: ["Next.js", "Node.js", "PostgreSQL", "Redis", "Docker", "AWS", "Vercel"],
-    },
-  },
-  {
-    title: "Full Stack Developer",
-    company: "Digital Agency",
-    duration: "2020 - 2022",
-    description:
-      "Built 20+ client projects using modern web technologies. Specialized in SaaS platforms and real-time applications with focus on performance and UX. Maintained 100% client satisfaction rate.",
-    achievements: ["Delivered 20+ projects", "100% client satisfaction", "Mentored 2 junior developers"],
-    details: {
-      highlights: [
-        "Designed and built 20+ full-stack web applications",
-        "Achieved 100% client satisfaction with on-time delivery",
-        "Implemented responsive designs across all major browsers",
-        "Mentored junior developers and conducted code reviews",
-      ],
-      stack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Firebase", "Stripe"],
-    },
-  },
-  {
-    title: "Frontend Developer",
-    company: "E-commerce Platform",
-    duration: "2019 - 2020",
-    description:
-      "Developed and maintained responsive web interfaces serving 50k+ monthly users. Optimized performance and improved user engagement through iterative design improvements.",
-    achievements: ["50k+ monthly users", "40% engagement increase", "Zero critical bugs"],
-    details: {
-      highlights: [
-        "Built responsive UI components used across the platform",
-        "Implemented accessibility standards (WCAG 2.1)",
-        "Reduced bundle size by 45% through code splitting",
-        "Achieved 95+ Lighthouse score",
-      ],
-      stack: ["React", "Redux", "Styled Components", "Jest", "Webpack"],
-    },
-  },
-]
 
 // ============================================================================
 // HERO SECTION
@@ -253,7 +138,7 @@ function HeroSection() {
         </div>
 
         <div ref={imageRef} className="relative h-96 lg:h-full min-h-96">
-          <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent rounded-2xl" />
+          <div className="absolute inset-0 bg-linear-to-br from-accent/20 to-transparent rounded-2xl" />
           <img
             src="/professional-developer-portrait.jpg"
             alt="Ekagra Sharma"
@@ -264,6 +149,7 @@ function HeroSection() {
     </section>
   )
 }
+
 
 // ============================================================================
 // ABOUT SECTION
@@ -395,7 +281,8 @@ function ProjectsSection() {
         y: 40,
       })
 
-      gsap.from(".project-card", {
+      {/*
+        gsap.from(".project-card", {
         scrollTrigger: {
           trigger: cardsRef.current,
           start: "top 80%",
@@ -405,6 +292,7 @@ function ProjectsSection() {
         y: 40,
         stagger: 0.1,
       })
+       */}
     })
 
     return () => ctx.revert()
@@ -423,7 +311,7 @@ function ProjectsSection() {
           </p>
         </div>
 
-        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+       <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"> 
           {PROJECTS.map((project) => {
             const IconComponent = project.icon
             return (
@@ -488,7 +376,7 @@ function SkillsSection() {
         y: 40,
       })
 
-      gsap.from(".skill-card", {
+      {/*gsap.from(".skill-card", {
         scrollTrigger: {
           trigger: cardsRef.current,
           start: "top 80%",
@@ -497,7 +385,7 @@ function SkillsSection() {
         opacity: 0,
         y: 40,
         stagger: 0.05,
-      })
+      })*/}
     })
 
     return () => ctx.revert()
@@ -516,7 +404,7 @@ function SkillsSection() {
           </p>
         </div>
 
-        {/* Main Skills Categories */}
+         Main Skills Categories 
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {SKILLS_CATEGORIES.map((item) => {
             const IconComponent = item.icon
@@ -689,7 +577,8 @@ function ExperienceSection() {
         y: 40,
       })
 
-      gsap.from(".exp-item", {
+     {/*
+       gsap.from(".exp-item", {
         scrollTrigger: {
           trigger: ".exp-item",
           start: "top 80%",
@@ -698,7 +587,7 @@ function ExperienceSection() {
         opacity: 0,
         y: 40,
         stagger: 0.2,
-      })
+      }) */}
     })
 
     return () => ctx.revert()

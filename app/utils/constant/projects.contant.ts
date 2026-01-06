@@ -1,0 +1,52 @@
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowRight,
+  Palette,
+  Brain,
+  Code,
+  Zap,
+  GitBranch,
+  Users,
+  BarChart3,
+  ShoppingCart,
+  Sparkles,
+  Menu,
+  X,
+} from "lucide-react"
+
+export const PROJECTS = [
+  {
+    title: "AI Content Platform",
+    description: "Full-stack SaaS for AI-powered content generation with real-time collaboration",
+    type: "SaaS",
+    icon: Brain,
+    href: "#",
+    tech: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+  },
+  {
+    title: "Design System",
+    description: "Comprehensive component library with 50+ components and live documentation",
+    type: "Design",
+    icon: Palette,
+    href: "#",
+    tech: ["React", "Tailwind CSS", "Storybook"],
+  },
+  {
+    title: "Real-time Analytics",
+    description: "Dashboard for tracking user behavior and product metrics with WebSocket integration",
+    type: "Analytics",
+    icon: BarChart3,
+    href: "#",
+    tech: ["Next.js", "WebSocket", "D3.js", "Redis"],
+  },
+  {
+    title: "E-Commerce Platform",
+    description: "Full shopping experience with inventory management and payment processing",
+    type: "E-Commerce",
+    icon: ShoppingCart,
+    href: "#",
+    tech: ["Next.js", "Stripe", "PostgreSQL", "Vercel"],
+  },
+]
