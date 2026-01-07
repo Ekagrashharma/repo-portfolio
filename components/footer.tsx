@@ -66,16 +66,16 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Social</h4>
             <div className="flex gap-3">
-              <a href="#" className="p-2 rounded-lg glass-effect hover:text-accent transition-colors">
+              <a href="https://github.com/ekagrashharma" className="p-2 rounded-lg glass-effect hover:text-accent transition-colors">
                 <Github size={18} />
               </a>
-              <a href="#" className="p-2 rounded-lg glass-effect hover:text-accent transition-colors">
+              <a href="https://www.linkedin.com/in/ekagrashharma" className="p-2 rounded-lg glass-effect hover:text-accent transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="p-2 rounded-lg glass-effect hover:text-accent transition-colors">
+              <a href="https://x.com/ekagrashharma" className="p-2 rounded-lg glass-effect hover:text-accent transition-colors">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="p-2 rounded-lg glass-effect hover:text-accent transition-colors">
+              <a href="mailto:ekagrashharma@gmail.com" className="p-2 rounded-lg glass-effect hover:text-accent transition-colors">
                 <Mail size={18} />
               </a>
             </div>

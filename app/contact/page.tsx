@@ -30,10 +30,10 @@ export default function Contact() {
   }
 
   const contacts = [
-    { icon: Mail, label: "Email", value: "hello@ekagra.dev", href: "mailto:hello@ekagra.dev" },
-    { icon: Linkedin, label: "LinkedIn", value: "/in/ekagra", href: "https://linkedin.com" },
-    { icon: Github, label: "GitHub", value: "@ekagra", href: "https://github.com" },
-    { icon: Twitter, label: "Twitter", value: "@ekagra_dev", href: "https://twitter.com" },
+    { icon: Mail, label: "Email", value: "ekagrashharma@gmail.com", href: "mailto:ekagrashharma@gmail.com" },
+    { icon: Linkedin, label: "LinkedIn", value: "/in/ekagrashharma", href: "https://www.linkedin.com/in/ekagrashharma/" },
+    { icon: Github, label: "GitHub", value: "@ekagrashharma", href: "https://github.com/ekagrashharma" },
+    { icon: Twitter, label: "X", value: "@ekagrashharma", href: "https://x.com/ekagrashharma" },
   ]
 
   return (

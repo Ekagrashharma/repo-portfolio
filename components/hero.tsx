@@ -53,9 +53,9 @@ export function HeroSection() {
   }, [])
 
   const socials = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:ekagra@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/ekagrashharma", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ekagrashharma", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:ekagrashharma@gmail.com", label: "Email" },
   ]
 
   return (

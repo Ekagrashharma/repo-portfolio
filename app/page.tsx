@@ -646,7 +646,7 @@ function ContactSection() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="contact-form glass-effect p-8 rounded-xl space-y-6">
+        <form onSubmit={handleSubmit} className="contact-form glass-effect p-8 border-2 rounded-xl space-y-6 ">
           <input
             type="text"
             name="name"
