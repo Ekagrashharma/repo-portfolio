@@ -95,7 +95,7 @@ function AboutSection() {
             value.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-12 my-12">
+          {/*<div className="grid md:grid-cols-2 gap-12 my-12">
             <div>
               <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                 <span className="accent-line" /> Skills
@@ -135,7 +135,7 @@ function AboutSection() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
 
           <p>
             I'm constantly learning, experimenting with new technologies, and staying updated with industry trends. My
@@ -297,7 +297,7 @@ function SkillsSection() {
             return (
               <div
                 key={item.category}
-                className="skill-card glass-effect p-8 rounded-xl hover:border-accent/50 transition-all duration-300 hover:translate-y-[-4px] h-full"
+                className="skill-card glass-effect p-8 rounded-xl hover:border-accent/50 transition-all duration-300 hover:translate-y-1 h-full"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="p-2 rounded-lg bg-accent/10">
@@ -335,21 +335,17 @@ function SkillsSection() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   "VS Code",
-                  "Git",
+                  "Git / GitHub",
                   "Vercel",
-                  "GitHub",
-                  "NPM/Yarn",
-                  "Docker",
-                  "AWS",
+                  "NPM/Yarn/bun",
                   "Stripe",
-                  "GraphQL",
                   "REST APIs",
                   "Postman",
                   "Linux",
                 ].map((tool) => (
                   <div
                     key={tool}
-                    className="glass-effect p-4 rounded-lg text-center hover:border-accent/50 transition-all hover:translate-y-[-2px]"
+                    className="glass-effect p-4 rounded-lg text-center hover:border-accent/50 transition-all hover:translate-y-0.5"
                   >
                     <p className="text-sm font-medium text-foreground">{tool}</p>
                   </div>
@@ -362,21 +358,15 @@ function SkillsSection() {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   "Figma",
-                  "Adobe XD",
                   "Framer",
                   "Photoshop",
-                  "Illustrator",
-                  "InVision",
                   "Webflow",
-                  "Sketch",
                   "Prototype.app",
                   "Spline",
-                  "After Effects",
-                  "Loom",
                 ].map((tool) => (
                   <div
                     key={tool}
-                    className="glass-effect p-4 rounded-lg text-center hover:border-accent/50 transition-all hover:translate-y-[-2px]"
+                    className="glass-effect p-4 rounded-lg text-center hover:border-accent/50 transition-all hover:translate-y-1"
                   >
                     <p className="text-sm font-medium text-foreground">{tool}</p>
                   </div>
@@ -386,7 +376,7 @@ function SkillsSection() {
           </div>
         </div>
 
-        {/* Proficiency Summary */}
+        {/* Proficiency Summary 
         <div className="mt-20 glass-effect p-12 rounded-xl">
           <h3 className="text-2xl font-bold text-foreground mb-8">Proficiency Summary</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -439,7 +429,7 @@ function SkillsSection() {
               </div>
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     </section>
   )
@@ -463,8 +453,8 @@ function ExperienceSection() {
         y: 40,
       })
 
-     {/*
-       gsap.from(".exp-item", {
+      {/*
+        gsap.from(".exp-item", {
         scrollTrigger: {
           trigger: ".exp-item",
           start: "top 80%",
@@ -496,7 +486,7 @@ function ExperienceSection() {
           {EXPERIENCE.map((exp, idx) => (
             <div
               key={exp.company}
-              className="exp-item glass-effect p-8 rounded-xl border-l-4 border-accent hover:border-accent/70 transition-all hover:translate-y-[-4px]"
+              className="exp-item glass-effect p-8 rounded-xl border-l-4 border-accent hover:border-accent/70 transition-all hover:translate-y-1"
             >
               {/* Header with Title and Duration */}
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">

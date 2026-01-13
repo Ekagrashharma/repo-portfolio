@@ -24,7 +24,8 @@ export default function About() {
         y: 30,
       })
 
-      gsap.from(contentRef.current?.children || [], {
+      {/*
+        gsap.from(contentRef.current?.children || [], {
         scrollTrigger: {
           trigger: contentRef.current,
           start: "top 80%",
@@ -34,6 +35,7 @@ export default function About() {
         y: 20,
         stagger: 0.1,
       })
+      */}
     })
 
     return () => ctx.revert()
@@ -67,6 +69,7 @@ export default function About() {
               value.
             </p>
 
+            {/*
             <div className="grid md:grid-cols-2 gap-12 my-12">
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
@@ -108,6 +111,7 @@ export default function About() {
                 </ul>
               </div>
             </div>
+            */}
 
             <p>
               I'm constantly learning, experimenting with new technologies, and staying updated with industry trends. My
