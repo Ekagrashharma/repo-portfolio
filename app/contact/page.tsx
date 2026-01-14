@@ -40,7 +40,7 @@ export default function Contact() {
     <main>
       <Navbar />
 
-      <section className="min-h-screen pt-32 pb-20 px-6 noise-bg">
+      <section className="min-h-[70vh] pt-32 pb-5 px-6 noise-bg">
         <div className="max-w-4xl mx-auto">
           <div className="mb-16">
             <div className="accent-line mb-8" />
@@ -73,9 +73,9 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="glass-effect p-12 rounded-2xl">
+          <div className=" glass-effect p-12 rounded-2xl border-black  ">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-foreground mb-2">Name</label>
                   <input
@@ -130,7 +130,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-accent text-accent-foreground font-bold py-4 rounded-lg hover:scale-105 transition-transform disabled:opacity-50"
+                className="w-full bg-accent text-accent-foreground font-bold py-4 rounded-lg hover:scale-105 transition-transform disabled:opacity-50 border-2 bg-blue-300"
               >
                 {submitted ? "✓ Message sent!" : "Send message"}
               </button>

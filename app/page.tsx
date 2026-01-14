@@ -76,7 +76,7 @@ function AboutSection() {
       <div className="max-w-4xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
-          <h2 className="text-6xl lg:text-7xl font-black text-foreground leading-tight">
+          <h2 className="text-4xl lg:text-7xl font-black text-foreground leading-tight">
             About <span className="text-accent">Me</span>
           </h2>
         </div>
@@ -193,7 +193,7 @@ const projectsLinks = [
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
-          <h2 className="text-6xl lg:text-7xl font-black text-foreground leading-tight">
+          <h2 className="text-4xl lg:text-7xl font-black text-foreground leading-tight">
             Featured <span className="text-accent">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl">
@@ -290,7 +290,7 @@ function SkillsSection() {
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
-          <h2 className="text-6xl lg:text-7xl font-black text-foreground leading-tight">
+          <h2 className="text-4xl lg:text-7xl font-black text-foreground leading-tight">
             Skills & <span className="text-accent">Expertise</span>
           </h2>
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl">
@@ -482,7 +482,7 @@ function ExperienceSection() {
       <div className="max-w-5xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
-          <h2 className="text-6xl lg:text-7xl font-black text-foreground leading-tight">
+          <h2 className="text-4xl lg:text-7xl font-black text-foreground leading-tight">
             Experience & <span className="text-accent">Achievements</span>
           </h2>
           <p className="text-xl text-muted-foreground mt-6 max-w-2xl">
@@ -611,11 +611,11 @@ function ContactSection() {
   }
 
   return (
-    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="contact">
+    <section className="min-h-[70vh]  pt-10 pb-5 px-6 noise-bg" id="contact">
       <div className="max-w-2xl mx-auto">
         <div ref={titleRef} className="mb-16 text-center">
           <div className="accent-line mb-8 mx-auto w-fit" />
-          <h2 className="text-6xl lg:text-7xl font-black text-foreground leading-tight">
+          <h2 className="text-4xl lg:text-7xl font-black text-foreground leading-tight">
             Let's <span className="text-accent">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground mt-6">
@@ -623,7 +623,7 @@ function ContactSection() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="contact-form glass-effect p-8 border-2 rounded-xl space-y-6 ">
+        <form onSubmit={handleSubmit} className="contact-form glass-effect p-8 border-black rounded-xl space-y-6 ">
           <input
             type="text"
             name="name"
@@ -657,7 +657,7 @@ function ContactSection() {
           <button
             type="submit"
             disabled={status === "loading"}
-            className="w-full px-8 py-4 bg-accent text-accent-foreground font-bold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+            className="w-full px-8 py-4 bg-accent text-accent-foreground font-bold rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 border-2 bg-blue-300"
           >
             {status === "loading" ? "Sending..." : status === "success" ? "Message Sent!" : "Send Message"}
           </button>
