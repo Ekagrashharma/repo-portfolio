@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import {
   Github,
@@ -236,10 +236,10 @@ const projectsLinks = [
                 {projectsLinks.map((links)=>{
                   return(
 
-                <a href={links.href} className="flex items-center gap-4 text-accent font-semibold group-hover:gap-6 transition-all">
+                <Link href={links.href} className="flex items-center gap-4 text-accent font-semibold group-hover:gap-6 transition-all">
                   <span>View Project</span>
                   <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-                </a>
+                </Link>
                 )
                 })}
               </a>

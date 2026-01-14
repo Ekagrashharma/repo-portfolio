@@ -26,12 +26,12 @@ export const SKILLS_CATEGORIES = [
   {
     category: "Backend",
     icon: GitBranch,
-    skills: ["Node.js", "PostgreSQL", "API Design", "Authentication", "WebSockets", "Caching"],
+    skills: ["Node.js", "API Design", "Authentication", ],
   },
   {
     category: "Full Stack",
     icon: Zap,
-    skills: ["System Design", "Database Architecture", "DevOps", "Cloud Deployment", "Scaling", "Testing"],
+    skills: ["System Design", "Database Architecture", "Cloud Deployment", "Scaling", "Testing"],
   },
   {
     category: "Design",
@@ -41,11 +41,11 @@ export const SKILLS_CATEGORIES = [
   {
     category: "AI & Tools",
     icon: Sparkles,
-    skills: ["AI Integration", "OpenAI API", "LangChain", "Prompt Engineering", "Vector DBs"],
+    skills: ["AI Integration", "OpenAI API",  "Prompt Engineering",],
   },
   {
     category: "DevOps",
     icon: Users,
-    skills: ["Docker", "AWS", "Vercel", "CI/CD", "GitHub Actions", "Monitoring"],
+    skills: [ "Vercel", "CI/CD", "GitHub Actions", "Monitoring"],
   },
 ]
