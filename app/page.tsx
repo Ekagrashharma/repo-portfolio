@@ -180,9 +180,13 @@ function ProjectsSection() {
       })
        */}
     })
-
     return () => ctx.revert()
   }, [])
+
+const projectsLinks = [
+    {  label: "Coaching web pay app", href: "https://github.com/Ekagrashharma/coaching-pay-web-app" },
+  ]
+  
 
   return (
     <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="projects">
@@ -197,7 +201,7 @@ function ProjectsSection() {
           </p>
         </div>
 
-       <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"> 
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"> 
           {PROJECTS.map((project) => {
             const IconComponent = project.icon
             return (
@@ -229,11 +233,15 @@ function ProjectsSection() {
                     </span>
                   ))}
                 </div>
+                {projectsLinks.map((links)=>{
+                  return(
 
-                <div className="flex items-center gap-4 text-accent font-semibold group-hover:gap-6 transition-all">
+                <a href={links.href} className="flex items-center gap-4 text-accent font-semibold group-hover:gap-6 transition-all">
                   <span>View Project</span>
                   <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-                </div>
+                </a>
+                )
+                })}
               </a>
             )
           })}
@@ -290,7 +298,7 @@ function SkillsSection() {
           </p>
         </div>
 
-         Main Skills Categories 
+          Main Skills Categories 
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {SKILLS_CATEGORIES.map((item) => {
             const IconComponent = item.icon
@@ -321,8 +329,8 @@ function SkillsSection() {
             )
           })}
         </div>
-
-        {/* Tools Section - Fixed Layout */}
+{/* 
+        Tools Section - Fixed Layout
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-foreground mb-12 flex items-center gap-3">
             <span className="accent-line" />
@@ -353,7 +361,7 @@ function SkillsSection() {
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h4 className="text-xl font-semibold text-accent mb-6">Design & Prototyping Tools</h4>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -372,7 +380,7 @@ function SkillsSection() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> 
           </div>
         </div>
 
@@ -429,7 +437,7 @@ function SkillsSection() {
               </div>
             </div>
           </div>
-        </div>*/}
+        </div>*/} 
       </div>
     </section>
   )
@@ -549,27 +557,6 @@ function ExperienceSection() {
             </div>
           ))}
         </div>
-
-        {/* Timeline Summary */}
-        <div className="mt-16 glass-effect p-8 rounded-xl">
-          <h3 className="text-2xl font-bold text-foreground mb-8">Career Timeline</h3>
-          <div className="relative">
-            {EXPERIENCE.map((exp, idx) => (
-              <div key={exp.company} className="flex gap-6 mb-8">
-                <div className="flex flex-col items-center">
-                  <div className="w-4 h-4 rounded-full bg-accent border-2 border-background" />
-                  {idx !== EXPERIENCE.length - 1 && <div className="w-0.5 h-24 bg-accent/20 mt-2" />}
-                </div>
-                <div className="pb-8">
-                  <p className="text-muted-foreground text-sm">{exp.duration}</p>
-                  <p className="text-foreground font-semibold">
-                    {exp.title} at {exp.company}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )
@@ -687,9 +674,6 @@ function ContactSection() {
 
 
 
-// ============================================================================
-// MAIN PAGE COMPONENT
-// ============================================================================
 function Home() {
   return (
     <main className="overflow-x-hidden">
@@ -706,3 +690,4 @@ function Home() {
 }
 
 export default Home
+

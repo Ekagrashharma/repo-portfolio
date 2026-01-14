@@ -82,7 +82,7 @@ export default function Skills() {
             {SKILLS_CATEGORIES.map((item) => (
               <div
                 key={item.category}
-                className="glass-effect p-8 rounded-xl hover:border-accent/50 transition-all duration-300 hover:translate-y-[-4px]"
+                className="glass-effect p-8 rounded-xl hover:border-accent/50 transition-all duration-300 hover:translate-y-1"
               >
                 <h3 className="text-xl font-bold text-foreground mb-6 flex items-center gap-3">
                   <span className="w-1 h-6 bg-accent rounded-full" />
@@ -104,7 +104,7 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* Featured tools section */}
+          {/* Featured tools section
           <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-foreground mb-8 flex items-center gap-3">
@@ -133,7 +133,7 @@ export default function Skills() {
                 )}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

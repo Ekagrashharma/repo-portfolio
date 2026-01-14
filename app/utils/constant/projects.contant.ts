@@ -18,12 +18,12 @@ import {
 
 export const PROJECTS = [
   {
-    title: "AI Content Platform",
-    description: "Full-stack SaaS for AI-powered content generation with real-time collaboration",
+    title: "Coaching web pay app ",
+    description: "Full-stack SaaS for coaching institute with payment intergation ",
     type: "SaaS",
     icon: Brain,
     href: "#",
-    tech: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+    tech: ["Next.js", "TypeScript", "React form hook", "Mongo DB", "Shadcn UI"],
   },
   {
     title: "Design System",
