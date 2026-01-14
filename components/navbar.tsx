@@ -63,7 +63,7 @@ export function Navbar() {
 
         {/* Mobile menu with gradient background */}
         {isOpen && (
-          <div className="absolute top-16 left-0 right-0 md:hidden bg-linear-to-b from-background via-background/95 to-background/80 border-b border-border backdrop-blur-md">
+          <div className="absolute top-16 left-0 right-0 md:hidden  border-b bg-blue-300 ">
             <div className="flex flex-col gap-4 p-6">
               {navItems.map((item) => (
                 <a
