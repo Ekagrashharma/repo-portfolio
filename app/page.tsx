@@ -180,9 +180,13 @@ function ProjectsSection() {
       })
        */}
     })
-
     return () => ctx.revert()
   }, [])
+
+const projectsLinks = [
+    {  label: "Coaching web pay app", href: "https://github.com/Ekagrashharma/coaching-pay-web-app" },
+  ]
+  
 
   return (
     <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="projects">
@@ -197,7 +201,7 @@ function ProjectsSection() {
           </p>
         </div>
 
-       <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"> 
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12"> 
           {PROJECTS.map((project) => {
             const IconComponent = project.icon
             return (
@@ -229,11 +233,15 @@ function ProjectsSection() {
                     </span>
                   ))}
                 </div>
+                {projectsLinks.map((links)=>{
+                  return(
 
-                <div className="flex items-center gap-4 text-accent font-semibold group-hover:gap-6 transition-all">
+                <a href={links.href} className="flex items-center gap-4 text-accent font-semibold group-hover:gap-6 transition-all">
                   <span>View Project</span>
                   <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
-                </div>
+                </a>
+                )
+                })}
               </a>
             )
           })}
@@ -687,9 +695,6 @@ function ContactSection() {
 
 
 
-// ============================================================================
-// MAIN PAGE COMPONENT
-// ============================================================================
 function Home() {
   return (
     <main className="overflow-x-hidden">
@@ -706,3 +711,4 @@ function Home() {
 }
 
 export default Home
+
