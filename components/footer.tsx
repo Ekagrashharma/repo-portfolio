@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Link, Linkedin, Mail, Twitter } from "lucide-react"
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -20,24 +20,24 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Links</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/" className="hover:text-accent transition-colors">
+                <Link href="/" className="hover:text-accent transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/projects" className="hover:text-accent transition-colors">
+                <Link href="/projects" className="hover:text-accent transition-colors">
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="hover:text-accent transition-colors">
+                <Link href="/about" className="hover:text-accent transition-colors">
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="hover:text-accent transition-colors">
+                <Link href="/contact" className="hover:text-accent transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

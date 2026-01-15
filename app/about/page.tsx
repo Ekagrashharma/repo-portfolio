@@ -56,7 +56,7 @@ export default function About() {
 
           <div ref={contentRef} className="space-y-8 text-lg text-muted-foreground leading-relaxed">
             <p>
-              I'm <span className="text-accent font-semibold">Ekagra Sharma</span>, a full-stack developer and designer
+              I'am <span className="text-accent font-semibold">Ekagra Sharma</span>, a full-stack developer and designer
               passionate about building elegant, scalable products that solve real-world problems. With a deep interest
               in both engineering and design, I believe the best products emerge at the intersection of these
               disciplines.

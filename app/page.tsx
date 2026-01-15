@@ -206,7 +206,7 @@ const projectsLinks = [
             return (
               <div
                 key={project.title}
-                href={project.href}
+                
                 className="project-card group glass-effect p-8 rounded-xl hover:border-accent/50 transition-all duration-300 hover:scale-105 cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-6">
