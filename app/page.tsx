@@ -72,7 +72,7 @@ function AboutSection() {
   }, [])
 
   return (
-    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="about">
+    <section className="min-h-screen pt-10 pb-10 px-6 noise-bg" id="about">
       <div className="max-w-4xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
@@ -189,7 +189,7 @@ const projectsLinks = [
   
 
   return (
-    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="projects">
+    <section className="min-h-full pt-10  px-6 noise-bg" id="projects">
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
@@ -205,7 +205,7 @@ const projectsLinks = [
           {PROJECTS.map((project) => {
             const IconComponent = project.icon
             return (
-              <a
+              <div
                 key={project.title}
                 href={project.href}
                 className="project-card group glass-effect p-8 rounded-xl hover:border-accent/50 transition-all duration-300 hover:scale-105 cursor-pointer"
@@ -223,7 +223,7 @@ const projectsLinks = [
 
                 <p className="text-muted-foreground mb-6 line-clamp-2">{project.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((t) => (
                     <span
                       key={t}
@@ -232,17 +232,19 @@ const projectsLinks = [
                       {t}
                     </span>
                   ))}
-                </div>
+            </div>
+
+
                 {projectsLinks.map((links)=>{
                   return(
 
-                <Link href={links.href} className="flex items-center gap-4 text-accent font-semibold group-hover:gap-6 transition-all">
+                <Link href={links.href} key={links.href} className="flex items-center gap-4 text-accent font-semibold group-hover:gap-6 transition-all">
                   <span>View Project</span>
                   <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform" />
                 </Link>
                 )
                 })}
-              </a>
+              </div>
             )
           })}
         </div>
@@ -286,7 +288,7 @@ function SkillsSection() {
   }, [])
 
   return (
-    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="skills">
+    <section className="min-h-full  pb-20 px-6 noise-bg" id="skills">
       <div className="max-w-6xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
@@ -478,7 +480,7 @@ function ExperienceSection() {
   }, [])
 
   return (
-    <section className="min-h-screen pt-10 pb-20 px-6 noise-bg" id="experience">
+    <section className="min-h-full pt-10 pb-20 px-6 noise-bg" id="experience">
       <div className="max-w-5xl mx-auto">
         <div ref={titleRef} className="mb-16">
           <div className="accent-line mb-8" />
