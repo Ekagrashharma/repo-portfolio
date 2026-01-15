@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
-export  function About() {
+export default function About() {
   const titleRef = useRef(null)
   const contentRef = useRef(null)
 
