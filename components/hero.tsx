@@ -59,7 +59,7 @@ export function HeroSection() {
   ]
 
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 noise-bg">
+    <section className="min-h-screen pt-32  px-6 noise-bg">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left content */}
         <div className="space-y-8">
@@ -86,7 +86,7 @@ export function HeroSection() {
           </p>
 
           {/* Social Links */}
-          <div className="flex gap-6 pt-4">
+          <div className="flex gap-6 ">
             {socials.map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
@@ -102,10 +102,10 @@ export function HeroSection() {
           </div>
 
           {/* CTA Button */}
-          <div ref={ctaRef} className="pt-8">
+          <div ref={ctaRef} className="">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground rounded-lg font-semibold hover:scale-105 transition-transform group"
+              className="inline-flex items-center gap-3 px-3  bg-accent text-accent-foreground rounded-lg font-semibold hover:scale-105 transition-transform group"
             >
               Let's build together
               <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
@@ -114,12 +114,12 @@ export function HeroSection() {
         </div>
 
         {/* Right side - Image placeholder */}
-        <div className="relative h-125 lg:h-150 flex items-center justify-center">
+        <div className="relative h-120 lg:h-150 flex items-center justify-center">
           <div
             ref={imageRef}
-            className="absolute inset-0 rounded-2xl overflow-hidden glass-effect border-2 border-accent/20"
+            className=" inset-0 rounded-2xl overflow-auto glass-effect border-accent/20"
           >
-            <div className="w-full h-full bg-linear-to-br from-accent/10 to-transparent flex items-center justify-center">
+            <div className="w-full h-auto bg-linear-to-br from-accent/10 to-transparent flex items-center justify-center">
               <div className="text-center">
                 
                   <img
@@ -127,8 +127,6 @@ export function HeroSection() {
                   alt="Ekagra Sharma"
                   className="w-full h-full object-cover rounded-2xl"
                 />
-                
-                <p className="text-muted-foreground text-sm">Professional Photo</p>
               </div>
             </div>
           </div>

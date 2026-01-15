@@ -66,7 +66,7 @@ export default function Skills() {
     <main>
       <Navbar />
 
-      <section className="min-h-screen pt-32 pb-20 px-6 noise-bg">
+      <section className="min-h-screen pt-10 pb-10 px-6 noise-bg">
         <div className="max-w-6xl mx-auto">
           <div ref={titleRef} className="mb-16">
             <div className="accent-line mb-8" />
