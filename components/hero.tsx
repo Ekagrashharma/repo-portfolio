@@ -118,12 +118,13 @@ export function HeroSection() {
         <div className="relative h-120 lg:h-150 flex items-center justify-center">
           <div
             ref={imageRef}
-            className=" inset-0 rounded-2xl overflow-auto glass-effect border-accent/20"
+            className=" absolute inset-0 rounded-2xl overflow-auto glass-effect border-accent/20"
           >
             <div className="w-full h-auto bg-linear-to-br from-accent/10 to-transparent flex items-center justify-center">
               <div className="text-center">
                 
                   <Image 
+                  fill
                   src="/myimg.jpeg"
                   alt="Ekagra Sharma"
                   className="object-cover rounded-2xl"
