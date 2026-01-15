@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import gsap from "gsap"
+import Image from "next/image"
 
 export function HeroSection() {
   const nameRef = useRef(null)
@@ -122,10 +123,10 @@ export function HeroSection() {
             <div className="w-full h-auto bg-linear-to-br from-accent/10 to-transparent flex items-center justify-center">
               <div className="text-center">
                 
-                  <img
+                  <Image 
                   src="/myimg.jpeg"
                   alt="Ekagra Sharma"
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="object-cover rounded-2xl"
                 />
               </div>
             </div>

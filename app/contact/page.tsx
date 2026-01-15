@@ -130,7 +130,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-accent text-accent-foreground font-bold py-4 rounded-lg hover:scale-105 transition-transform disabled:opacity-50 border-2 bg-blue-300"
+                className="w-full bg-blue-300 text-accent-foreground font-bold py-4 rounded-lg hover:scale-105 transition-transform disabled:opacity-50 border-2 "
               >
                 {submitted ? "✓ Message sent!" : "Send message"}
               </button>
